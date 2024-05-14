@@ -1,0 +1,3 @@
+os arquivos devem ter id, nome, profissão e campos
+os arquivos não devem estar vazios
+os arquivos não devem ser longos com mais de 4 linhas

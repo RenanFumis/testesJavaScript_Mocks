@@ -1,0 +1,8 @@
+Fazer isso no CMD ou POWERSHELL
+
+nvm install (numero da versao que vc quer) -> instala a versao solicitada
+nvm inastall --lts -> instala a versão long-term support (versão recomendata)
+nvm use (numero da versao que vc quer) -> usa a versão instalada na maquina
+nvm alias default (numero da versao que vc quer) -> define a versã padrão do Node.js para o projeto todo
+criar arquivo .nvmrc - com a verão desejada e nvm use para ativar aquela versão.
+node -v .nvmrc -> salva a verão apropriada para aquele projeto
