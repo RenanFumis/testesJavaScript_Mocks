@@ -8,21 +8,21 @@ const assert = require('assert');
   {
     const filePath = './mock/emptyFile-invalid.csv';
     const expected = new Error(error.FILE_LENGTH_ERROR_MESSAGE);
-    const result = File.csvToJson(filePath);
+    const result = File.csvToJSON(filePath);
     await assert.rejects(result, expected);
   }
 
   {
     const filePath = './mock/invalid-header.csv';
     const expected = new Error(error.FILE_FIELDS_ERROR_MESSAGE);
-    const result = File.csvToJson(filePath);
+    const result = File.csvToJSON(filePath);
     await assert.rejects(result, expected);
   }
 
   {
     const filePath = './mock/fiveItems-invalid.csv';
-    const expected = new Error(error.FILE_FIELDS_ERROR_MESSAGE);
-    const result = File.csvToJson(filePath);
+    const expected = new Error(error.FILE_LENGTH_ERROR_MESSAGE);
+    const result = File.csvToJSON(filePath);
     await assert.rejects(result, expected);
   }
 
@@ -46,9 +46,10 @@ const assert = require('assert');
       nome: 'Hiei',
       profissao: 'Estudante',
       idade: 14
-    }
+    },
   ]
-    const result = await File.csvToJson(filePath);
-    await assert.deepEqual(result, expected);
+    const result = await File.csvToJSON(filePath);
+    assert.deepEqual(result, expected);
   }
+
 })()
