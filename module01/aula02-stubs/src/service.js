@@ -4,7 +4,13 @@ class Service{
   }
 
   async getPlanets(url){
-
+    //a referencia para validação do resultado e o esperado
+    const data = await this.makeRequest(url);
+    return {
+      name: data.name,
+      surfaceWter: data.surface_water,
+      terrain: data.terrain,
+    };
   }
 }
 
