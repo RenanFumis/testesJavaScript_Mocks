@@ -1,3 +1,4 @@
 module01/aula00-nvm/
 module01/aula01-mocks/
-/module01/aula02-stubs/node_modules/
+module01/aula02-stubs/node_modules/
+module01/aula03-spies/node_modules/
